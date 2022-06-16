@@ -1,0 +1,26 @@
+<form [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+    (keydown.enter)="$event.preventDefault()">
+
+    <input
+    formControlName="email"
+    type="email"
+    placeholder="email"
+    autocomplete="off"
+    />
+
+    <input
+    formControlName="password"
+    type="password"
+    placeholder="password"
+    autocomplete="off"
+    />
+
+      <button
+      class="button"
+      color="accent"
+      type="submit"
+      >
+      Login
+    </button>
+</form>
