@@ -1,0 +1,5 @@
+<button (click)="navigateBack()">Back</button>
+
+<div *ngFor="let prodct of products$ | async as products">
+    {{products | json}}
+</div>
