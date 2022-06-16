@@ -9,13 +9,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TokenInterceptorProvider } from './shared/interceptors/token.interceptor';
+import { CacheInterceptorProvider } from './shared/interceptors/caching.interceptor';
+import { ProductsComponent } from './pages/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import { TokenInterceptorProvider } from './shared/interceptors/token.intercepto
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [TokenInterceptorProvider],
+  providers: [CacheInterceptorProvider,TokenInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
